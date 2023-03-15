@@ -38,7 +38,7 @@ async def search_by_name(message: types.Message, state: FSMContext):
             text += f"{i}) {car[1]}-{car[2]}-{car[3]}-{car[4]} \n\n"
         # markup = get_post_url_button(car[-2])
         pagination = get_pagination_button(offset=0)
-        await message.answer(text, parse_mode="HTML", reply_markup=pagination)
+        await message.answer(text,  reply_markup=pagination)
     else:
         await message.answer("По данному имени на найдены совпадение в базе.")
 
